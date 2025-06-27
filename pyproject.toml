@@ -1,0 +1,32 @@
+[project]
+name = "spaceship-dns-updater"
+version = "0.0.0"
+description = "Script to update DNS records using the spaceship API"
+authors = [
+    {name = "Benjamin Wiessneth",email = "b.wiessneth@gmail.com"}
+]
+readme = "README.rst"
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "spaceship-api (>=0.1.0,<0.2.0)",
+    "pyyaml (>=6.0.2,<7.0.0)",
+    "pydantic (>=2.11.7,<3.0.0)",
+    "requests (>=2.32.4,<3.0.0)",
+    "click (>=8.2.1,<9.0.0)",
+    "loguru (>=0.7.3,<0.8.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+spaceship-dns-updater = "spaceship_dns_updater.updater:main"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.1"
+isort = "^6.0.1"
+black = "^25.1.0"
+
+[tool.black]
+line-length = 120
