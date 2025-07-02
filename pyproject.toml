@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "spaceship-dns-updater"
-version = "0.0.0"
+version = "0.1.0"
 description = "Script to update DNS records using the spaceship API"
 authors = [
     {name = "Benjamin Wiessneth",email = "b.wiessneth@gmail.com"}
@@ -17,7 +17,7 @@ dependencies = [
 ]
 
 [tool.commitizen]
-version = "0.0.0"
+version = "0.1.0"
 update_changelog_on_bump = true
 version_files = [
     "pyproject.toml:^version",
