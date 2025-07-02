@@ -28,3 +28,13 @@ def get_external_ip_addresses():
     logger.info(f"External IPv4 address = {ipv4}")
     logger.info(f"External IPv6 address = {ipv6}")
     return ipv4, ipv6
+
+
+def get_log_file_path():
+    if sys.platform == "win32":
+        base = Path(os.getenv("LOCALAPPDATA", Path.home()))
+    else:
+        base = Path.home() / ".local" / "share"
+    log_dir = base / "spaceship-dns-updater" / "logs"
+    log_dir.mkdir(parents=True, exist_ok=True)
+    return log_dir / "spaceship-dns-updater.log"
