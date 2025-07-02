@@ -1,4 +1,4 @@
-[tool.poetry]
+[project]
 name = "spaceship-dns-updater"
 version = "0.1.0"
 description = "Script to update DNS records using the spaceship API"
@@ -21,7 +21,7 @@ version = "0.1.0"
 update_changelog_on_bump = true
 version_files = [
     "pyproject.toml:^version",
-    "spaceship_dns_updater/__init__.py:__version__"
+    "spaceship_api/__init__.py:__version__"
 ]
 
 [build-system]
