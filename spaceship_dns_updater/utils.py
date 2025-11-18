@@ -7,7 +7,7 @@ from requests import get
 
 def get_external_ipv4():
     try:
-        ipv4 = get("https://api.ipify.org").content.decode("utf8")
+        ipv4 = get("https://4.ipconfig.com").content.decode("utf8")
         return ipv4
     except:
         return None
@@ -15,7 +15,7 @@ def get_external_ipv4():
 
 def get_external_ipv6():
     try:
-        ipv6 = get("https://api6.ipify.org").content.decode("utf8")
+        ipv6 = get("https://6.ipconfig.com").content.decode("utf8")
         return ipv6
     except:
         return None

@@ -22,11 +22,12 @@ A minimal example configuration:
     api_key: <YOUR_API_KEY>
     api_secret: <YOUR_API_SECRET>
 
-    your-domain.com:
-      records:
-        - type: "A"
-          name: "@"
-          ttl: 1800
+    domains:
+      your-domain.com:
+        records:
+          - type: "A"
+            name: "@"
+            ttl: 1800
 
 Records
 =======
@@ -67,17 +68,18 @@ You can manage multiple domains in the same YAML config file by adding each doma
     api_key: <YOUR_API_KEY>
     api_secret: <YOUR_API_SECRET>
 
-    your-first-domain.com:
-      records:
-        - type: "A"
-          name: "@"
-          ttl: 1800
+    domains:
+      your-first-domain.com:
+        records:
+          - type: "A"
+            name: "@"
+            ttl: 1800
 
-    your-second-domain.com:
-      records:
-        - type: "A"
-          name: "@"
-          ttl: 1800
+      your-second-domain.com:
+        records:
+          - type: "A"
+            name: "@"
+            ttl: 1800
 
 Installation
 ############
